@@ -1,0 +1,45 @@
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+
+public class DemoAutomation {
+
+	
+	public static void main(String[] args) {
+	
+		//System.setProperty("webdriver.firefox.driver", "C:\\BrowserDrivers\\Firefoxdriver.exe");
+		
+		//WebDriverManager.chromedriver().setup();
+		WebDriverManager.firefoxdriver().setup();
+		//WebDriverManager.edgedriver().setup();
+		//WebDriverManager.operadriver().setup();
+		//WebDriverManager.chromiumdriver().setup()
+		//WebDriverManager.iedriver().setup();
+		
+		ChromeDriver driver = new ChromeDriver();
+        //FirefoxDriver driver = new FirefoxDriver();
+		//EdgeDriver driver = new EdgeDriver();
+		//operadriver driver = new OperaDriver();
+		driver.get("https://www.amazon.com");
+		driver.manage().window().maximize();
+		driver.findElement(By.xpath("//*[@id=\"twotabsearchtextbox\"]")).sendKeys("dell laptop computer i7");
+		driver.findElement(By.xpath("//*[@id=\"nav-search-submit-button\"]")).click();
+		driver.findElement(By.xpath("//*[@id=\"search\"]/div[1]/div[1]/div/span[1]/div[1]/div[23]/div/div/div/div/div/div[2]/div/div/div[1]/h2/a/span")).click();
+		driver.close();
+		
+		//driver.get("https://www.advancecareersuk.com");
+		//driver.manage().window().maximize();
+		//driver.get("https://www.qa.advancecareersuk.com");
+		//driver.get("https://www.qa.advancecareersuk.com/register");
+		//driver.findElement(By.xpath("//*[@id=\"navbarNav\"]/ul/li[7]/a"))
+		
+		
+		
+								
+	}
+
+}
